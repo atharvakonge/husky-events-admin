@@ -165,7 +165,7 @@ const EventDetails = () => {
             <div className="formGroup">
               <label htmlFor="description">Event Attendees</label>
               <div className="attendee">
-                {eventAttendees ? (
+                {eventAttendees?.length > 0 ? (
                   eventAttendees?.map((attendee) => (
                     <div className="attendeeName">{attendee}</div>
                   ))
