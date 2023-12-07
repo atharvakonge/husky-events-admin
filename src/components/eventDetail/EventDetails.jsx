@@ -29,6 +29,7 @@ const EventDetails = () => {
   // };
 
   const [event, setEvent] = useState({});
+  const [eventAttendees, setEventAttendees] = useState([]);
   const [showToast, setShowToast] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -47,6 +48,12 @@ const EventDetails = () => {
         );
         console.log("Hello    fetchData   res:", res);
         setEvent(res.data);
+
+        const response = await axios.get(
+          `${process.env.REACT_APP_BASE_BACKEND_URL}/event/getregisteredusernames?eventID=${eventId}`
+        );
+
+        setEventAttendees(response.data);
       } catch (error) {
         console.log("Hello    fetchData   error:", error);
       }
@@ -154,6 +161,14 @@ const EventDetails = () => {
                 id="description"
                 onChange={handleChange}
               />
+            </div>
+            <div className="formGroup">
+              <label htmlFor="description">Event Attendees</label>
+              <div className="attendee">
+                {event?.attendees?.map((attendee) => (
+                  <div className="attendeeName">{attendee}</div>
+                ))}
+              </div>
             </div>
           </div>
           <div className="buttonContainer">
