@@ -165,9 +165,13 @@ const EventDetails = () => {
             <div className="formGroup">
               <label htmlFor="description">Event Attendees</label>
               <div className="attendee">
-                {event?.attendees?.map((attendee) => (
-                  <div className="attendeeName">{attendee}</div>
-                ))}
+                {eventAttendees ? (
+                  eventAttendees?.map((attendee) => (
+                    <div className="attendeeName">{attendee}</div>
+                  ))
+                ) : (
+                  <div className="attendeeName">No attendees</div>
+                )}
               </div>
             </div>
           </div>
