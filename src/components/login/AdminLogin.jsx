@@ -40,7 +40,7 @@ export default function Login() {
       );
       localStorage.setItem("token", res?.data?.details?.token);
 
-      if (res.status === 200) {
+      if (res) {
         setSuccess(true);
         setShowMessage("User successfully logged in!");
         setTimeout(() => {
