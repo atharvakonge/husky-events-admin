@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Husky Events Admin Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the Husky Events Admin Dashboard! This web application is designed for administrators to manage events, users, and transactions related to Husky Events. The dashboard features a sleek and user-friendly interface with both dark mode and light mode options.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+### Authentication
 
-### `npm start`
+- **Admin Login:** Only administrators can log in to the dashboard to access its features.
+- **Secure Authentication:** The application uses JSON Web Tokens (JWT) for secure session management.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Dashboard Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Analytics:** View analytics and information about transactions, users, and events at a glance.
+- **Dark Mode/Light Mode:** Switch between dark mode and light mode for a personalized user experience.
 
-### `npm test`
+### Users and Events Management
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **CRUD Operations:** Administrators can perform Create, Read, Update, and Delete operations on both users and events.
+- **Search Functionality:** Easily search for users or events based on specific criteria.
+- **Pagination:** Navigate through large sets of data with pagination functionality.
 
-### `npm run build`
+## Preview the application
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  The application has been deployed to the given link: https://husky-admin.onrender.com/
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  **Log In Page**
+<img width="1280" alt="Screenshot 2023-12-25 at 3 50 12 PM" src="https://github.com/atharvakonge/Netflix/assets/73238261/ed05b2e8-7227-4609-9994-fec096aed6d2">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+  **Dashboard**
+<img width="1261" alt="Screenshot 2023-12-25 at 3 53 27 PM" src="https://github.com/atharvakonge/Netflix/assets/73238261/0d82093b-35b4-4d91-a566-5c5768e00637">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  **Users Page**
+  <img width="1269" alt="Screenshot 2023-12-25 at 3 53 41 PM" src="https://github.com/atharvakonge/Netflix/assets/73238261/3e63a044-3d5f-4f12-a8b2-06119385bdc0">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+  **Events Page**
+<img width="1265" alt="Screenshot 2023-12-25 at 3 54 23 PM" src="https://github.com/atharvakonge/Netflix/assets/73238261/89f0a779-7683-40f5-8f41-4efd38797801">
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  **Light Mode**
+<img width="1269" alt="Screenshot 2023-12-25 at 3 54 39 PM" src="https://github.com/atharvakonge/Netflix/assets/73238261/7115158b-dacd-45de-a3b6-1c068b430bcf">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Technology Used
 
-### Analyzing the Bundle Size
+- **Frontend:**
+  - React.js
+  - Context API for state management
+  - CSS for styling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Backend:**
+  - Node.js
+  - Express
+  - MongoDB for database storage
+  - JSON Web Token (JWT) for authorization and session management
 
-### Making a Progressive Web App
+## Setup Instructions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **Clone the repository:**
+   - `git clone https://github.com/your-username/husky-events-admin-dashboard.git`
+   - `cd husky-events-admin-dashboard`
 
-### Advanced Configuration
+2. **Install dependencies:**
+   - `npm install`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. **Set up your MongoDB database:**
+   - Create a .env file in the server directory.
+   - Add your MongoDB connection string:
+     - `MONGODB_URI=your-mongodb-connection-string`
 
-### Deployment
+4. **Run the application:**
+   - `npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+5. **Open Application in Browser:**
+   - Open your browser and navigate to http://localhost:3000 to use the Husky Events Admin Dashboard.
 
-### `npm run build` fails to minify
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions to this project are welcome! Follow the steps below:
+
+1. **Fork the repository on GitHub.**
+2. **Create a new branch for your feature or bug fix:**
+   - `git checkout -b feature-name`
+3. **Make your changes and commit them:**
+   - `git commit -m 'Add a new feature'`
+4. **Push your changes to your fork:**
+   - `git push origin feature-name`
+5. **Submit a pull request through GitHub.**
+
+## Issues
+
+If you encounter any issues or have suggestions for improvements, please open an issue on the GitHub repository.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more information.
